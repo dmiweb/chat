@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #edefec;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  font-family: 'Roboto', sans-serif;
+  color: #100c08;
+  padding-top: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  width: 60%;
+  min-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.chat__header {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #100c08;
+}
+
+.chat__connect {
+  width: 240px;
+  margin-top: 20px;
+  border-radius: 10px 0 0 10px;
+  padding: 10px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-clip-path: inset(-1px 0 -1px -1px);
+  clip-path: inset(-5px 0 -5px -5px);
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.chat__container {
+  display: flex;
+  width: 90%;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #e2e5e9;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+}
+
+.chat__area {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+}
+
+.chat__messages-container {
+  display: flex;
+  flex: 0 0 90%;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+  border-top-left-radius: 7px;
+  overflow-y: auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.chat__messages-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.chat__messages-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #c4c1c1;
+}
+
+.chat__messages-container::-webkit-scrollbar-track {
+  border: 1px solid #c4c1c1;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.chat__messages-input {
+  flex: 0 1 10%;
+  width: 100%;
+  border-bottom-left-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.form .form__group {
+  margin-bottom: 0;
+}
+
+.form .form__input {
+  margin-top: 8px;
+  border-color: #e2e5e9;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #c9cacc;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #100c08;
+}
+
+.form__input:focus {
+  outline: none;
+  border: 1px solid #20b1df;
+}
+
+.chat__userlist {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chat__user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chat-user-avatar {
+  min-width: 35px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.chat-user-name {
+  text-align: left;
+  word-break: break-word;
+}
+
+.chat-user-name__yourself {
+  font-weight: 600;
+  color: #fa6969;
+}
+
+.message__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+  max-width: 55%;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.message__container::before,
+.message__container::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: -20px;
+  border: 10px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.message__container::after {
+  border-top: 10px solid white;
+  bottom: -19px;
+}
+
+.message__header {
+  font-size: 16px;
+}
+
+.message__container-interlocutor {
+  font-size: 12px;
+}
+
+.message__container-yourself {
+  margin-left: auto;
+}
+
+.message__container-yourself::before,
+.message__container-yourself::after {
+  content: "";
+  position: absolute;
+  left: 75%;
+  right: 20%;
+  bottom: -20px;
+  border: 10px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.message__container-yourself::after {
+  border-top: 10px solid white;
+  bottom: -19px;
+}
+
+.message__container-yourself .message__header {
+  margin-left: auto;
+}
+
+.message__container-yourself .message__container-interlocutor {
+  width: 100%;
+  color: #fa6969;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
