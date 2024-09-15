@@ -113,7 +113,6 @@ export default class Chat {
   }
 
   async registerEvents(e) {
-    console.log(e);
     const message = await JSON.parse(e.data);
 
     if (message.type === "send") {
@@ -132,7 +131,7 @@ export default class Chat {
     this.websocket.addEventListener("error", () => {
       console.log("error connect");
     });
-    window.addEventListener("unload", this.sendExitMessage);
+    window.addEventListener("visiblitychange", this.sendExitMessage);
   }
 
   onEnterChatHandler() {
