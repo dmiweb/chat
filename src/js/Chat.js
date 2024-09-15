@@ -131,7 +131,7 @@ export default class Chat {
     this.websocket.addEventListener("error", () => {
       console.log("error connect");
     });
-    window.addEventListener("visiblitychange", this.sendExitMessage);
+    window.addEventListener("beforeunload", this.sendExitMessage);
   }
 
   onEnterChatHandler() {
